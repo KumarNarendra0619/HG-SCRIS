@@ -1,0 +1,7 @@
+dataset_id,theme,provider,product_or_dataset,spatial_coverage,temporal_coverage,resolution,crs,vertical_datum,access_url,license,acquisition_date,processing_version,qa_status,notes
+DS-GLACIER-001,glacier,TODO,Glacier inventory,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Populate after source verification
+DS-DEМ-001,terrain,TODO,DEM,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Verify horizontal/vertical datum
+DS-HYDRO-001,hydrography,TODO,Rivers streams tributaries lakes,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Authoritative source preferred
+DS-SETTLE-001,exposure,TODO,Settlements,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Record source date
+DS-POP-001,exposure,TODO,Population grid or census,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Do not infer population from settlement geometry
+DS-INFRA-001,exposure,TODO,Critical infrastructure,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,not_started,Separate roads bridges schools health facilities
