@@ -1,0 +1,55 @@
+sources:
+  D-GLA-001:
+    name: Randolph Glacier Inventory
+    provider: NSIDC / RGI
+    role: baseline_glacier_inventory
+    status: planned
+  D-DEM-001:
+    name: Digital Elevation Model
+    role: terrain_and_hydrology
+    status: planned
+  D-HYD-001:
+    name: HydroSHEDS / HydroBASINS
+    role: hydrographic_network_and_catchments
+    status: planned
+  D-EO-001:
+    name: Sentinel-2
+    provider: ESA / Copernicus
+    role: glacier_lake_and_event_change
+    status: planned
+  D-EO-002:
+    name: Landsat
+    provider: USGS / NASA
+    role: historical_change_and_event_reconstruction
+    status: planned
+  D-LAK-001:
+    name: Global/local lake datasets
+    role: lake_inventory_and_change
+    status: planned
+  D-RAN-001:
+    name: GPM IMERG
+    provider: NASA
+    role: precipitation_context
+    status: planned
+  D-CLI-001:
+    name: ERA5-Land
+    provider: Copernicus Climate Change Service
+    role: climate_context
+    status: planned
+  D-LSL-001:
+    name: Global Landslide Catalog
+    provider: NASA
+    role: event_reference
+    status: planned
+  D-POP-001:
+    name: Census and gridded population
+    role: population_exposure
+    status: planned
+  D-SET-001:
+    name: OpenStreetMap and authoritative settlement sources
+    role: settlement_inventory
+    status: planned
+  D-INF-001:
+    name: OpenStreetMap and authoritative infrastructure sources
+    role: infrastructure_and_evacuation
+    status: planned
