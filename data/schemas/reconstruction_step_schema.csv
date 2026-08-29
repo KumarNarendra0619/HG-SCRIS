@@ -1,0 +1,2 @@
+step_id,event_id,sequence,stage,status,input_refs,output_ref,method,parameters,uncertainty,validation_ref,processing_version,lineage_id,notes
+RSTEP-TEMPLATE,EV-TEMPLATE,1,source,observed,SOURCE-001,OUTPUT-001,documented evidence,{},high,VAL-001,v0.1,LIN-TEMPLATE,TEMPLATE ONLY
