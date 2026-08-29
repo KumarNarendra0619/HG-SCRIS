@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data — large/raw files stay outside Git
+/data/raw/*
+/data/interim/*
+/data/processed/*
+/data/derived/*
+/data/validation/*
+
+# Raster/vector temporary files
+*.tif
+*.tiff
+*.vrt
+*.gpkg
+*.shp
+*.geojson
+*.parquet
+
+# Outputs
+/outputs/maps/*
+/outputs/models/*
+/outputs/animations/*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
