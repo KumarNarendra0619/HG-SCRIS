@@ -1,0 +1,2 @@
+scenario_id,event_or_scenario_id,hazard_process,source_type,source_feature_id,model_version,input_dem_id,input_network_id,trigger_class,scenario_start,scenario_end,runout_or_extent_ref,peak_metric,arrival_time_ref,uncertainty_ref,validation_status,lineage_id,notes
+SCENARIO-TEMPLATE,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,pending,LIN-TEMPLATE,TEMPLATE ONLY
