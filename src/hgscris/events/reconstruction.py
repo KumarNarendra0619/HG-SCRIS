@@ -1,59 +1,51 @@
-"""Transparent event-reconstruction primitives for HG-SCRIS.
+"""Evidence-led historical event reconstruction primitives for HG-SCRIS.
 
-These functions create traceable scenario components; they are not calibrated
-hydrodynamic or debris-flow solvers.
+These functions keep observed, inferred and modelled evidence separate. They
+are not calibrated hydrodynamic or debris-flow solvers.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-
 VALID_STATUS = {"observed", "inferred", "modelled"}
 
-
 @dataclass(frozen=True)
-class ReconstructionStep:
-    step_id: str
+class Evidence:
+    evidence_id: str
     event_id: str
-    stage: str
-    status: str
-    input_refs: tuple[str, ...]
-    output_ref: str
-    method: str
-    uncertainty: str = "unknown"
-
-    def validate(self) -> list[str]:
-        errors: list[str] = []
-        if self.status not in VALID_STATUS:
-            errors.append("invalid status")
-        if not self.step_id.strip() or not self.event_id.strip():
-            errors.append("step_id and event_id are required")
-        if not self.stage.strip() or not self.method.strip():
-            errors.append("stage and method are required")
-        if not self.output_ref.strip():
-            errors.append("output_ref is required")
-        if not self.input_refs:
-            errors.append("at least one input reference is required")
-        return errors
+    phenomenon: str
+    claim_type: str
+    confidence: str
+    independent_source_group: str
 
 
-def validate_reconstruction_chain(steps: list[ReconstructionStep]) -> list[str]:
-    """Validate traceability and prevent a modelled step from masquerading as observed evidence."""
+def validate_evidence(evidence: Evidence) -> list[str]:
     errors: list[str] = []
-    outputs = set()
-    for step in steps:
-        errors.extend(f"{step.step_id}: {e}" for e in step.validate())
-        if step.output_ref in outputs:
-            errors.append(f"duplicate output_ref: {step.output_ref}")
-        outputs.add(step.output_ref)
+    for field, value in {
+        "evidence_id": evidence.evidence_id,
+        "event_id": evidence.event_id,
+        "phenomenon": evidence.phenomenon,
+        "claim_type": evidence.claim_type,
+        "confidence": evidence.confidence,
+        "independent_source_group": evidence.independent_source_group,
+    }.items():
+        if not value:
+            errors.append(f"{field} is required")
     return errors
 
 
-def scenario_envelope(distances_km: list[float], *, max_distance_km: float) -> list[float]:
-    """Return a geometric screening envelope only; no intensity/probability is implied."""
-    if max_distance_km <= 0:
-        raise ValueError("max_distance_km must be > 0")
-    if any(d < 0 for d in distances_km):
-        raise ValueError("distances cannot be negative")
-    return [d for d in distances_km if d <= max_distance_km]
+def evidence_independence_count(evidence: list[Evidence]) -> int:
+    return len({e.independent_source_group for e in evidence if e.independent_source_group})
+
+
+def reconstruction_status(*, observed_count: int, inferred_count: int, contradicted_count: int) -> str:
+    if contradicted_count > 0:
+        return "CONTESTED"
+    if observed_count > 0 and inferred_count > 0:
+        return "OBSERVED_PLUS_INFERRED"
+    if observed_count > 0:
+        return "OBSERVED_SUPPORTED"
+    if inferred_count > 0:
+        return "INFERRED_ONLY"
+    return "INSUFFICIENT_EVIDENCE"
