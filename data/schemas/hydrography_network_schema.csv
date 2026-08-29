@@ -1,0 +1,2 @@
+reach_id,source_dataset,source_id,geometry_ref,reach_type,order_value,upstream_id,downstream_id,basin_id,glacier_source_id,lake_source_id,length_m,elevation_upstream_m,elevation_downstream_m,longitudinal_gradient,connectivity_status,qa_status,lineage_id,notes
+REACH-TEMPLATE,TBD,TBD,TBD,stream,,,,,,,,,,,pending,pending,LIN-TEMPLATE,TEMPLATE ONLY
