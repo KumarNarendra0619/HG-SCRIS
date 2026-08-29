@@ -1,2 +1,2 @@
-evidence_id,event_id,evidence_type,source_name,source_url,observation_date,spatial_reference,temporal_reference,claim,confidence,independent_source,notes
-EV-0001,EV-0001,placeholder,TODO,TODO,TBD,TBD,TBD,TBD,pending,yes,TEMPLATE ONLY
+event_evidence_id,event_id,source_type,source_name,source_url,observation_datetime,publication_datetime,location_ref,phenomenon,claim_type,evidence_value,confidence,spatial_extent_ref,temporal_extent_start,temporal_extent_end,independent_source_group,validation_status,lineage_id,notes
+EVENT-EVIDENCE-TEMPLATE,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,pending,LIN-TEMPLATE,TEMPLATE ONLY
