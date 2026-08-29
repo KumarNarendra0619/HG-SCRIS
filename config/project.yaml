@@ -1,19 +1,41 @@
 project:
   name: HG-SCRIS
   full_name: Himalayan Glacier-to-Settlement Cascade Risk Intelligence System
-  version: 0.1.0
-  stage: BUILD-01A
+  version: 0.6.1
+  stage: AUDIT-02
   engine: G2S Cascade Engine
 
 spatial:
-  working_crs: EPSG:4326
+  storage_crs: EPSG:4326
+  analysis_crs: project_local_projected
+  output_crs: EPSG:4326
+  rule: analysis_crs_must_be_explicit_for_distance_area_slope_routing_operations
 
 analysis:
   risk_classes: 5
-  confidence_classes: 3
+  confidence_classes: 5
+  confidence_states:
+    - HIGH_SUPPORT
+    - MODERATE_SUPPORT
+    - LIMITED_SUPPORT
+    - LOW_SUPPORT
+    - UNRESOLVED
+  scientific_states:
+    - OBSERVED
+    - INFERRED
+    - MODELLED
+    - SCENARIO
+    - UNCERTAIN
   modes:
     - event_reconstruction
     - future_scenario
+  claim_types:
+    - descriptive
+    - associational
+    - predictive
+    - causal
+    - scenario
+    - decision
 
 outputs:
   formats:
@@ -35,4 +57,21 @@ provenance:
     - parameter_set
     - processing_date
     - code_version
+    - scientific_state
     - confidence
+    - uncertainty_refs
+    - source_refs
+
+contracts:
+  schema_version: 1.0
+  evidence_state_model: 1.0
+  uncertainty_model: 1.0
+  claim_model: 1.0
+  provenance_model: 1.0
+
+quality:
+  stale_dependency_blocks_release: true
+  orphan_dependency_blocks_release: true
+  undefined_probability_semantics_blocks_release: true
+  false_precision_blocks_release: true
+  observed_inferred_modelled_separation_required: true
