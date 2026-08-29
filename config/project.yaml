@@ -1,0 +1,38 @@
+project:
+  name: HG-SCRIS
+  full_name: Himalayan Glacier-to-Settlement Cascade Risk Intelligence System
+  version: 0.1.0
+  stage: BUILD-01A
+  engine: G2S Cascade Engine
+
+spatial:
+  working_crs: EPSG:4326
+
+analysis:
+  risk_classes: 5
+  confidence_classes: 3
+  modes:
+    - event_reconstruction
+    - future_scenario
+
+outputs:
+  formats:
+    vector:
+      - geopackage
+      - geojson
+    tabular:
+      - csv
+      - parquet
+    raster:
+      - geotiff
+
+provenance:
+  required: true
+  fields:
+    - dataset_id
+    - dataset_version
+    - method_id
+    - parameter_set
+    - processing_date
+    - code_version
+    - confidence
