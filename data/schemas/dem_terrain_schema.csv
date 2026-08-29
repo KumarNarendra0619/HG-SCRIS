@@ -1,0 +1,2 @@
+terrain_id,source_dataset,source_id,geometry_ref,elevation_min_m,elevation_max_m,elevation_mean_m,slope_mean_deg,aspect_mean_deg,relief_m,cell_size_m,vertical_datum,crs,acquisition_or_reference_date,processing_level,qa_status,lineage_id,notes
+TERRAIN-TEMPLATE,TBD,TBD,TBD,,,,, , ,TBD,TBD,TBD,TBD,raw,pending,LIN-TEMPLATE,TEMPLATE ONLY
