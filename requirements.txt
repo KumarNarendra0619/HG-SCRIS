@@ -1,0 +1,13 @@
+numpy
+pandas
+geopandas
+rasterio
+shapely
+pyproj
+xarray
+scipy
+networkx
+scikit-learn
+matplotlib
+pyyaml
+pytest
