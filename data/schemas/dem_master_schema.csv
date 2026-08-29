@@ -1,0 +1,15 @@
+field_name,data_type,required,description
+ dem_id,string,yes,Canonical HG-SCRIS DEM identifier
+source_product,string,yes,DEM source/product name
+acquisition_date,date,no,DEM acquisition/reference date
+horizontal_crs,string,yes,Horizontal coordinate reference system
+vertical_datum,string,yes,Vertical datum or explicitly unknown
+resolution_m,float,yes,Native or processed raster resolution in metres
+extent,string,yes,Spatial extent/tile coverage
+nodata_value,string,yes,NoData value/definition
+processing_version,string,yes,HG-SCRIS processing version
+conditioned_flag,boolean,yes,Whether hydro-conditioning has been applied
+quality_status,string,yes,QA state
+source_url,string,yes,Source/provenance reference
+lineage_id,string,yes,Provenance lineage identifier
+notes,string,no,Limitations and processing notes
