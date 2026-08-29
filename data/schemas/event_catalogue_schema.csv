@@ -1,0 +1,32 @@
+field_name,data_type,required,description
+ event_id,string,yes,Canonical HG-SCRIS event identifier
+ event_name,string,yes,Human-readable event name
+ event_date,date,yes,Event date
+ event_time,string,no,Event time or uncertainty window
+ country,string,yes,Country
+region,string,yes,State/province/district or equivalent
+location,string,yes,Locality or event location
+latitude,float,no,Event latitude when known
+longitude,float,no,Event longitude when known
+trigger_type,string,yes,Trigger classification
+process_type,string,yes,Primary hazard/process classification
+glacier_id,string,no,Linked glacier identifier if established
+lake_id,string,no,Linked lake identifier if established
+outlet_id,string,no,Linked outlet identifier if established
+hydro_reach_id,string,no,Linked downstream reach if established
+observed_footprint_ref,string,no,Reference to mapped observed footprint
+affected_settlements,string,no,Observed affected settlements
+observed_impact_type,string,no,Flood debris sediment erosion building road bridge life or other observed impact
+fatalities_count,float,no,Documented fatalities when available
+injuries_count,float,no,Documented injuries when available
+displacement_count,float,no,Documented displacement when available
+damage_summary,string,no,Documented damage summary
+evidence_level,string,yes,Overall evidence confidence
+source_count,integer,no,Number of independent source records
+primary_source_ref,string,no,Primary source/reference identifier
+source_url,string,yes,Provenance/source reference
+observation_window,string,no,Temporal window of observations
+uncertainty_note,string,no,Known uncertainty/conflict
+processing_version,string,yes,HG-SCRIS processing version
+lineage_id,string,yes,Provenance lineage identifier
+qa_status,string,yes,QA status
