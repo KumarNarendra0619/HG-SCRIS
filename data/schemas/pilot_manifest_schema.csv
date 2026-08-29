@@ -1,0 +1,2 @@
+pilot_id,event_id,study_area,objective,dem_id,glacier_dataset,hydrography_dataset,exposure_dataset,event_evidence_set,model_level,validation_strategy,status,processing_version,lineage_id,notes
+PILOT-001,EV-001,TBD,TBD,TBD,TBD,TBD,TBD,TBD,0,TBD,planned,v0.1,LIN-PILOT-001,Template; replace placeholders only after source QA
