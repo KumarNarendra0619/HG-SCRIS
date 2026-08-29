@@ -1,0 +1,26 @@
+field_name,data_type,required,description
+source_glacier_id,string,yes,Stable source inventory identifier
+hgscris_glacier_id,string,yes,HG-SCRIS canonical glacier identifier
+geometry,polygon,yes,Glacier boundary in declared CRS
+inventory_name,string,yes,Source inventory/product name
+inventory_version,string,yes,Source inventory version/date
+observation_date,date,no,Boundary observation/reference date
+area_km2,float,yes,Glacier area in square kilometres
+elevation_min_m,float,no,Minimum glacier elevation in metres
+elevation_mean_m,float,no,Mean glacier elevation in metres
+elevation_max_m,float,no,Maximum glacier elevation in metres
+mean_slope_deg,float,no,Mean glacier slope in degrees
+aspect_deg,float,no,Representative aspect in degrees
+mass_balance_value,float,no,Mass-balance measurement/value when available
+mass_balance_unit,string,no,Mass-balance unit and sign convention
+mass_balance_period,string,no,Mass-balance observation period
+ice_thickness_m,float,no,Ice thickness when independently available
+volume_km3,float,no,Glacier ice volume when independently available
+lake_id,string,no,Linked glacial-lake identifier when established
+outlet_id,string,no,Linked outlet identifier when established
+hydro_reach_id,string,no,Downstream hydrography reach identifier when established
+data_quality,string,yes,QA status for this record
+source_url,string,yes,Source/provenance reference
+processing_version,string,yes,HG-SCRIS processing version
+lineage_id,string,yes,Provenance lineage identifier
+uncertainty_note,string,no,Known uncertainty or limitation
