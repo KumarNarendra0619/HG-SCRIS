@@ -1,0 +1,21 @@
+field_name,data_type,required,description
+feature_id,string,yes,Stable source feature identifier
+hgscris_feature_id,string,yes,Canonical HG-SCRIS identifier
+feature_type,string,yes,lake outlet stream tributary river reach
+geometry,geometry,yes,Feature geometry in declared CRS
+source_name,string,yes,Source dataset/product
+source_version,string,yes,Source version/date
+observation_date,date,no,Observation/reference date
+upstream_id,string,no,Immediate upstream feature identifier
+downstream_id,string,no,Immediate downstream feature identifier
+order_value,integer,no,Network order where applicable
+from_elevation_m,float,no,Reach upstream elevation
+ to_elevation_m,float,no,Reach downstream elevation
+length_km,float,no,Reach length
+slope_percent,float,no,Longitudinal reach slope
+connectivity_status,string,yes,QA status of linkage
+routing_method,string,yes,Method used to establish downstream relation
+source_url,string,yes,Provenance reference
+processing_version,string,yes,HG-SCRIS processing version
+lineage_id,string,yes,Provenance lineage identifier
+uncertainty_note,string,no,Known limitation or ambiguity
