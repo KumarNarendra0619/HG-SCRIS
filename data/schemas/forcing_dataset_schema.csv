@@ -1,0 +1,2 @@
+forcing_id,source_dataset,variable,source_id,geometry_ref,time_start,time_end,time_step,units,spatial_resolution,temporal_resolution,processing_level,qa_status,lineage_id,scientific_role,limitations,notes
+FORCING-TEMPLATE,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,raw,pending,LIN-TEMPLATE,TBD,TBD,TEMPLATE ONLY
